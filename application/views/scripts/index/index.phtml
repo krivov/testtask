@@ -4,10 +4,14 @@
     When you doclick on Total, the sum of above numbers will show
 </div>
 
-<table>
+<table class="votesTable">
     <tr>
         <td>Color</td>
         <td>Votes</td>
     </tr>
     <?php echo $this->partialLoop('index/partials/color.phtml', $this->colors); ?>
+    <tr>
+        <td><a href="#" class="totalLink">TOTAL</a></td>
+        <td class="td-total"></td>
+    </tr>
 </table>
