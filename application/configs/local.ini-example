@@ -1,0 +1,8 @@
+[production]
+resources.db.adapter = "mysqli"
+resources.db.params.username = "root"
+resources.db.params.password = "root"
+resources.db.params.dbname = "bd_name"
+resources.db.params.charset = "utf8"
+
+[development : production]
