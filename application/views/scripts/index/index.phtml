@@ -1,1 +1,13 @@
-This is file /application/views/scripts/index/index.phtml
+<h1>Colors</h1>
+<div>
+    Click on the Color Name to see how many votes for that color. <br/>
+    When you doclick on Total, the sum of above numbers will show
+</div>
+
+<table>
+    <tr>
+        <td>Color</td>
+        <td>Votes</td>
+    </tr>
+    <?php echo $this->partialLoop('index/partials/color.phtml', $this->colors); ?>
+</table>
