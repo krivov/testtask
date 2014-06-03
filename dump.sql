@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v10.42 
-MySQL - 5.6.16-log : Database - test
+MySQL - 5.5.23 : Database - test
 *********************************************************************
 */
 
@@ -21,6 +21,10 @@ CREATE TABLE `colors` (
   PRIMARY KEY (`color`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/*Data for the table `colors` */
+
+insert  into `colors`(`color`) values ('Blue'),('Green'),('Indigo'),('Orange'),('Red'),('Violent'),('Yellow');
+
 /*Table structure for table `votes` */
 
 DROP TABLE IF EXISTS `votes`;
@@ -33,6 +37,10 @@ CREATE TABLE `votes` (
   KEY `color_frn1` (`color`),
   CONSTRAINT `color_frn1` FOREIGN KEY (`color`) REFERENCES `colors` (`color`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `votes` */
+
+insert  into `votes`(`city`,`color`,`votes`) values ('Anchorage','Green',10),('Anchorage','Yellow',15),('Brooklyn','Blue',250),('Brooklyn','Red',100),('Detroit','Red',160),('Selma','Violent',5),('Selma','Yellow',15);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
