@@ -1,17 +1,25 @@
 <h1>Colors</h1>
-<div>
+<div class="headText">
     Click on the Color Name to see how many votes for that color. <br/>
     When you doclick on Total, the sum of above numbers will show
 </div>
 
 <table class="votesTable">
-    <tr>
-        <td>Color</td>
-        <td>Votes</td>
-    </tr>
-    <?php echo $this->partialLoop('index/partials/color.phtml', $this->colors); ?>
-    <tr>
-        <td><a href="#" class="totalLink">TOTAL</a></td>
-        <td class="td-total"></td>
-    </tr>
+    <thead>
+        <tr>
+            <td>Color</td>
+            <td>Votes</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php echo $this->partialLoop('index/partials/color.phtml', $this->colors); ?>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td><a href="#" class="totalLink">TOTAL</a></td>
+            <td class="td-total"></td>
+        </tr>
+    </tfoot>
 </table>
